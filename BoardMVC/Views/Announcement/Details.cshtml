@@ -1,0 +1,25 @@
+﻿@model BoardMVC.Models.Announcement
+
+<h2>Деталі оголошення</h2>
+<dl class="row">
+    <dt class="col-sm-2">Назва</dt>
+    <dd class="col-sm-10">@Model.Title</dd>
+
+    <dt class="col-sm-2">Опис</dt>
+    <dd class="col-sm-10">@Model.Description</dd>
+    
+    <dt class="col-sm-2">Дата створення</dt>
+    <dd class="col-sm-10">@Model.CreatedDate.ToString("dd MMMM yyyy")</dd>
+
+    <dt class="col-sm-2">Статус</dt>
+    <dd class="col-sm-10">@Model.Status</dd>    
+    
+    <dt class="col-sm-2">Категорія</dt>
+    <dd class="col-sm-10">@Model.CategoryName</dd>   
+    
+    <dt class="col-sm-2">Підкатегорія</dt>
+    <dd class="col-sm-10">@Model.SubCategoryName</dd>
+</dl>
+
+<a asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-warning">Редагувати</a>
+<a asp-action="Index" class="btn btn-secondary">Назад</a>
